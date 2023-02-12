@@ -1,3 +1,4 @@
+<!-- #Template - template used to render the HTML of our page from app.py -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +15,7 @@
     <div style="margin-top: 50px;" class="ui container">
         <h1 class="ui center aligned header">To Do App</h1>
 
+        <!-- #Form - Forms perhaps as a concept, where their submussion (via a button with type="submit") calls the action, e.g. in this case routing to the "/add" route, defined in app.py. -->
         <form class="ui form" action="/add" method="post">
             <div class="field">
                 <label>Todo Title</label>
@@ -24,6 +26,7 @@
 
         <hr>
 
+        <!-- #ControlFlow - Using Jinja (configured by Flask) to dynamically render content in our HTML using loops, conditionals. -->
         {% for todo in todo_list %}
         <div class="ui segment">
             <p class="ui big header">{{todo.id }} | {{ todo.title }}</p>
