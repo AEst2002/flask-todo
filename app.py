@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+# Context - Give global access to the current application and its properties.
 app.app_context().push()
 
 # /// = relative path, //// = absolute path
